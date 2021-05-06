@@ -126,7 +126,7 @@ const functionMain = () => new Promise(async (resolve, reject) => {
       // Registration Users
       logMessage = `[${moment().format('HH:mm:ss')}] Trying to Register New Users...`
       const resRegisterUsers = await functionRegisterUsers(usersEmail, usersReferral)
-      if (resRegisterUsers.isSuccess) {
+      if (resRegisterUsers.data.isSuccess) {
         // Verify New Email
         logMessage = `[${moment().format('HH:mm:ss')}] Trying to Verify Email Verification...`
         let resLinkConfirmation, resVerifyUsers, countLC = 0, countVU = 0
